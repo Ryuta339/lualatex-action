@@ -16,6 +16,6 @@ jobs:
         uses: actions/checkout@v2
       - name: Compile Tex File
         id: compile_tex_file
-        uses: tsukaba-mas/platex-action@main
+        uses: tsukuba-mas/platex-action@main
         with:
           LATEX_FILE_NAME: "main.tex"
