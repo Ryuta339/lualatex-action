@@ -1,0 +1,11 @@
+name: "lualatex Action"
+author: "Ryuta339"
+description: "Compile tex file with lualatex"
+inputs:
+  LATEX_FILE_NAME:
+    description: "Compile Tex File"
+    required: true
+    default: "main.tex"
+runs:
+  using: "docker"
+  image: "Dockerfile"

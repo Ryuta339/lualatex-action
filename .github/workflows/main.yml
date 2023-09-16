@@ -1,0 +1,21 @@
+# The Example of Compiling LaTeX File
+
+on:
+  push:
+    tags:
+      - "v*"
+
+jobs:
+  test_job:
+    runs-on: ubuntu-latest
+    name: Example of compiling pdf
+    steps:
+      # make pdf
+      # LATEX_FILE_NAME -> main.pdf generated
+      - name: Set up Git repository
+        uses: actions/checkout@v2
+      - name: Compile Tex File
+        id: compile_tex_file
+        uses: tsukaba-mas/platex-action@main
+        with:
+          LATEX_FILE_NAME: "main.tex"
